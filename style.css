@@ -642,12 +642,14 @@ div#menu_mobi
     font-weight: bold;
 }
 #appraise .slick-next{
-	    top: -70px;
+	    top: -50px;
     	right: 0px;
+    	background-size: 30px;
 }
 #appraise .slick-prev{
-		top: -70px;
+		top: -50px;
     	left: calc(100% - 80px);
+    	background-size: 30px;
 }
 
 
@@ -847,47 +849,27 @@ div#thongke ul li img
 }
 
 /* sidebar right */
+#sidebar{
+
+}
+div.tieude
+{
+	color:#fff;
+	text-align:center;
+	font-size:14px;
+	background:#035ad3;
+	height:39px;
+	line-height:39px;
+	font-weight:bold;
+	border-radius:4px;
+}
 div.danhmuc
 {
 	border:1px solid #d6d6d6;
 	margin-bottom:10px;
+	background:#f2f2f2;
 
 }
-div#danhmuc ul
-{
-	list-style:none;
-}
-div#danhmuc ul li
-{
-	
-}
-div#danhmuc ul li:last-child
-{
-	border:none;
-}
-div#danhmuc ul li a
-{
-	color:#454545;
-	font-family:'myFont';
-	text-decoration:none;
-	font-size:14px;
-	transition:0.4s;
-	display:block;
-	border-bottom:1px solid #DDD;
-	padding:9px 5px 9px 20px;
-	background:url(images/i_tinkhac.png) 4px 12px no-repeat;
-}
-div#danhmuc ul li a:hover
-{
-	color:red;
-	transition:0.4s;
-}
-div#danhmuc ul li ul li a
-{
-	padding:9px 5px 9px 35px;
-	background:url(images/i_tinkhac.png) 19px 12px no-repeat;
-}
-
 div#tinmoi
 {
 	

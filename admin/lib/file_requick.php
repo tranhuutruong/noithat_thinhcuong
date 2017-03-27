@@ -22,6 +22,14 @@
 			$source = "about";
 			$template = "about";
 			break;
+
+		case 'dich-vu':
+			$type = "dichvu";
+			$title = _dichvu;
+			$title_cat = _dichvu;
+			$source = "news";
+			$template = isset($_GET['id']) ? "news_detail" : "news";
+			break;
 			
 		case 'tin-tuc':
 			$type = "tintuc";
@@ -31,13 +39,7 @@
 			$template = isset($_GET['id']) ? "news_detail" : "news";
 			break;
 			
-		case 'dich-vu':
-			$type = "dichvu";
-			$title = _dichvu;
-			$title_cat = _dichvu;
-			$source = "news";
-			$template = isset($_GET['id']) ? "news_detail" : "news";
-			break;
+		
 			
 		case 'tuyen-dung':
 			$type = "tuyendung";

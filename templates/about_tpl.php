@@ -1,10 +1,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-9 no-padding">
-			<div class="title-service">
-				<h3><?=$title_cat?></h3
-			</div>
-			</div>
 			<div class="box_container">
 			    <div class="content">   
 			        <?=$tintuc_detail['noidung']?>   
@@ -14,7 +10,9 @@
 			</div><!--.box_container-->
 		</div>
 		<div class="col-md-3 no-padding-right">
-			<?php include _template.'layout/left.php' ?>
+			<div id="sidebar">
+				<?php include _template.'layout/left.php' ?>
+			</div>
 		</div>
 	</div>
 </div>
