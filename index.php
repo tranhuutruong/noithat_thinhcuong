@@ -10,6 +10,7 @@
 	{
 		$_SESSION['lang']='';
 	}
+	$_SESSION['lang']='';
 	$lang=$_SESSION['lang'];
 		
 	require_once _source."lang$lang.php";	

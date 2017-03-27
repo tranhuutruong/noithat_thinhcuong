@@ -12,10 +12,10 @@
 		        <div class="service_item">
 					<div class="thumb">
 						<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
-						<a href="">Chi tiết</a>
+						<a href="<?=$com?>/<?=$item['tenkhongdau']?>-<?=$item['id']?>.html" title="<?=$item['ten']?>">Chi tiết</a>
 					</div>
 					<div class="description">
-						<h3><a href=""><?= $item['ten'] ?></a></h3>
+						<h3><a href="<?=$com?>/<?=$item['tenkhongdau']?>-<?=$item['id']?>.html" title="<?=$item['ten']?>"><?= $item['ten'] ?></a></h3>
 						<p><?= catchuoi($item['mota'],300) ?></p>
 					</div>
 				</div>

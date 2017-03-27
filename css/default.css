@@ -135,7 +135,7 @@ div.dangky_frm .item_lienhe input[type='text'],div.dangky_frm .item_lienhe texta
 div.frm_lienhe .item_lienhe input[type='button'],div.frm_lienhe .item_lienhe input[type='reset'],div.frm_lienhe .item_lienhe input[type='submit']
 {
 	padding:7px 25px;
-	background:#ee0303;
+	background:#035ad3;
 	border:none;
 	color:#fff;
 	border-radius:3px;
@@ -148,7 +148,7 @@ div.frm_lienhe .item_lienhe input[type='button'],div.frm_lienhe .item_lienhe inp
 .btn_dangnhap
 {
 	padding:7px 25px;
-	background:#ee0303;
+	background:#035ad3;
 	border:none;
 	display:block;
 	color:#fff;

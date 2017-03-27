@@ -109,7 +109,7 @@
 <?php } ?>
 
 <!-- JAVASCRIPT IN PRODUCT DETAIL -->
-<?php if($_REQUEST['com']=='san-pham' && $id!=''){ ?>
+<?php if(($_REQUEST['com']=='san-pham' || $_REQUEST['com']=='thiet-ke' || $_REQUEST['com']=='cong-trinh') && $id!=''){ ?>
 	<!-- Cloud Zoom -->
 	<script type="text/javascript" src="js/cloudzoom.js"></script>
 	<script src="js/jquery.swipebox.js"></script>

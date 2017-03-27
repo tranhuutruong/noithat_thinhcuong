@@ -651,8 +651,15 @@ div#menu_mobi
     	left: calc(100% - 80px);
     	background-size: 30px;
 }
-
-
+.slick .slick-arrow{
+	background-size: 25px;
+}
+.slick .slick-next{
+    right: -5px;
+}
+.slick .slick-prev{
+    left: -1px !important;
+}
 div.wap_item
 {
 	text-align:center;
@@ -1012,6 +1019,7 @@ div.wap_pro
 {
 	color:#0033FF;
 	font-size:18px;
+	text-transform: uppercase;
 }
 .product_info li.giacu
 {

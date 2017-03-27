@@ -30,6 +30,14 @@
 			$source = "news";
 			$template = isset($_GET['id']) ? "news_detail" : "news";
 			break;
+
+		case 'thiet-ke':
+			$type = "thietke";
+			$title = _thietke;
+			$title_cat = _thietke;
+			$source = "product";
+			$template = isset($_GET['id']) ? "product_detail" : "product";
+			break;
 			
 		case 'tin-tuc':
 			$type = "tintuc";
@@ -63,14 +71,6 @@
 			$title_cat = _ketquatimkiem;
 			$source = "search";
 			$template = "product";
-			break;
-						
-		case 'san-pham':
-			$type = "sanpham";
-			$title = _sanpham;
-			$title_cat = _sanpham;
-			$source = "product";
-			$template = isset($_GET['id']) ? "product_detail" : "product";
 			break;
 			
 		case 'video':

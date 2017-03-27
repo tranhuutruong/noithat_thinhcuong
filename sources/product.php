@@ -29,7 +29,7 @@
 		$url_facebook = getCurrentPageURL();
 		
 		//Hình ảnh khác của sản phẩm
-		$sql_hinhthem = "select id,ten$lang as ten,thumb,photo from #_hinhanh where id_hinhanh='".$row_detail['id']."' and type='".$type."' and hienthi=1 order by stt,id desc";
+		$sql_hinhthem = "select id,ten$lang as ten,thumb,photo from #_hinhanh where id_hinhanh='".$row_detail['id']."' and hienthi=1 order by stt,id desc";
 		$d->query($sql_hinhthem);
 		$hinhthem = $d->result_array();
 		
