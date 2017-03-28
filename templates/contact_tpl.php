@@ -5,6 +5,7 @@
         </div>
         <div class="col-md-4">
             <?=$company_contact['noidung'];?> 
+            <?= $toado_2 ?>
         </div>
 
         <div class="col-md-4">
@@ -42,7 +43,13 @@
             <h4>Miền Bắc</h4>
             <div id="map_canvas"></div> 
             <h4>Miền Nam</h4>
-            <div id="map_2" style=" height: 200px;width: 99%;margin:0px auto;border:1px solid #BBB;"></div>
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div id="map_canvas2" style=" height: 200px;width: 99%;margin:0px auto;border:1px solid #BBB;"></div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>

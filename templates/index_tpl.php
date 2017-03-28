@@ -7,9 +7,9 @@
 						<h3>Giới thiệu</h3>
 					</div>
 					<div class="content">
-						<a href="/gioi-thieu.html"><img src="resize/366x246/2/<?= _upload_hinhanh_l.$gioithieu['photo'] ?>"></a>
+						<a href="gioi-thieu.html"><img src="resize/366x246/2/<?= _upload_hinhanh_l.$gioithieu['photo'] ?>"></a>
 						<p><?= catchuoi($gioithieu['mota'],1500) ?></p>
-						<p><a href="/gioi-thieu"><span class="glyphicon glyphicon-triangle-right"></span> Xem thêm</a></p>
+						<p><a href="gioi-thieu.html"><span class="glyphicon glyphicon-triangle-right"></span> Xem thêm</a></p>
 					</div>
 				</div>
 			</div>
@@ -26,12 +26,12 @@
 									<p><?= date('m,Y',$item['ngaytao']) ?></p>
 								</div>
 								<div class="thumb">
-									<a href="">
+									<a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">
 										<img src="resize/135x103/2/<?=_upload_tintuc_l.$item['thumb']?>">
 									</a>
 								</div>
 								<div class="description">
-									<h3><a href=""><?= catchuoi($item['ten'],35) ?></a></h3>
+									<h3><a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><?= catchuoi($item['ten'],35) ?></a></h3>
 									<p><?= catchuoi($item['mota'],140 )?></p>
 								</div>
 							</div>
@@ -57,7 +57,7 @@
 							<h3><?= $item['ten'] ?></h3>
 							<p><?= catchuoi($item['mota'],200) ?></p>
 						</div>
-						<p><a href="">Chi tiết</a></p>
+						<p><a href="cong-trinh/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">Chi tiết</a></p>
 					</div>
 				</div>
 			</div>
@@ -76,10 +76,10 @@
 					<div class="service_item">
 						<div class="thumb">
 							<img src="resize/350x267/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
-							<a href="">Chi tiết</a>
+							<a href="dich-vu/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">Chi tiết</a>
 						</div>
 						<div class="description">
-							<h3><a href=""><?= $item['ten'] ?></a></h3>
+							<h3><a href="dich-vu/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><?= $item['ten'] ?></a></h3>
 							<p><?= catchuoi($item['mota'],300) ?></p>
 						</div>
 					</div>
@@ -100,10 +100,10 @@
 					<div class="advisory_item">
 						<div class="thumb">
 							<img src="resize/233x178/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
-							<a href="">Chi tiết</a>
+							<a href="tu-van/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">Chi tiết</a>
 						</div>
 						<div class="description">
-							<h3><a href=""><?= $item['ten'] ?></a></h3>
+							<h3><a href="tu-van/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><?= $item['ten'] ?></a></h3>
 							<p><?= catchuoi($item['mota'],200) ?></p>
 						</div>
 					</div>
@@ -127,26 +127,26 @@
 							<div class="new_item">
 								<div class="thumb">
 									<img src="resize/300x300/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
-									<a href="">Chi tiết</a>
+									<a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">Chi tiết</a>
 								</div>
 								<div class="description">
 									<p class="odd"><?= date('d, F',$ngaytao) ?></p>
-									<h3><a href=""><?= $item['ten'] ?></a></h3>
+									<h3><a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><?= $item['ten'] ?></a></h3>
 									<p><?= $item['mota'] ?></p>
-									<a href=""><span class="glyphicon glyphicon-triangle-right"></span> Xem tiếp</a>
+									<a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><span class="glyphicon glyphicon-triangle-right"></span> Xem tiếp</a>
 								</div>
 							</div>
 						<?php }else{ ?>
 							<div class="new_item">
 								<div class="description">
 									<p class="even"><?= date('d, F',$ngaytao) ?></p>
-									<h3><a href=""><?= $item['ten'] ?></a></h3>
+									<h3><a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><?= $item['ten'] ?></a></h3>
 									<p><?= $item['mota'] ?></p>
-									<a href=""><span class="glyphicon glyphicon-triangle-right"></span> Xem tiếp</a>
+									<a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html"><span class="glyphicon glyphicon-triangle-right"></span> Xem tiếp</a>
 								</div>
 								<div class="thumb">
 									<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
-									<a href="">Chi tiết</a>
+									<a href="tin-tuc/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>.html">Chi tiết</a>
 								</div>
 							</div>	
 						<?php } ?>

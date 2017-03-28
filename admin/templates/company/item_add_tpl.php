@@ -253,7 +253,7 @@
 </style>
  
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5Mevy_rl8U4ZyBB8i5jmdxfvb9Cg5UoE&libraries=places"></script>
 <script type="text/javascript">
     if ($('.content-item-map').is(':visible')) {
         var map;

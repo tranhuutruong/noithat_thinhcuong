@@ -293,7 +293,7 @@
 	</script>
 
 	<!-- gMap -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5Mevy_rl8U4ZyBB8i5jmdxfvb9Cg5UoE"></script>
     <script type="text/javascript">
 	   var map;
 	   var infowindow;
@@ -323,19 +323,29 @@
 		   	var popup = myInfoWindow;infowindow_array[id] = new google.maps.InfoWindow({ content: popup});google.maps.event.addListener(marker[id], 'mouseover', function() {if (id == old_id) return;if (old_id > 0) infowindow_array[old_id].close();infowindow_array[id].open(map, marker[id]);old_id = id;});google.maps.event.addListener(infowindow_array[id], 'closeclick', function() {old_id = 0;});}function moveToMaker(id){var location = marker[id].position;map.setCenter(location);if (old_id > 0) infowindow_array[old_id].close();infowindow_array[id].open(map, marker[id]);old_id = id;
 	    }
 
-		function myMap() {
-		  var mapCanvas = document.getElementById("map_2");
-		  var myCenter = new google.maps.LatLng(<?= $company['toado_2'] ?>); 
-		  var mapOptions = {center: myCenter, zoom: 5};
-		  var map = new google.maps.Map(mapCanvas,mapOptions);
-		  var marker = new google.maps.Marker({
-		    position: myCenter,
-		    animation: google.maps.Animation.BOUNCE
-		  });
-		  marker.setMap(map);
+		function initialize2() {
+			var myLatlng = new google.maps.LatLng(<?=$company['toado_2']?>);
+			var mapOptions = {
+				zoom: 16,
+				center: myLatlng
+			};
 
+			var map = new google.maps.Map(document.getElementById('map_canvas2'), mapOptions);
+
+			var contentString = "<table><tr><th><?=$company['ten']?></th></tr><tr><td  style='color:#F00;font-weight:bold;'><?=$company['diachi_2']?></td></tr></table>";
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: '<?=$company['ten']?>'
+			});
+			infowindow.open(map, marker);
 		}
-		 myMap();
+		google.maps.event.addDomListener(window, 'load', initialize2);
 	</script>
 <?php } ?>
 

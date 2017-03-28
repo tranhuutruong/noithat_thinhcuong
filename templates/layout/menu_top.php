@@ -13,21 +13,21 @@
             <li><a class="<?php if($_REQUEST['com'] == 'dich-vu') echo 'active'; ?>" href="dich-vu.html"><?=_dichvu?></a>
             	<ul>
             		<?php foreach ($menu_dichvu as $item): ?>
-            			<li><a href=""><?= $item['ten'] ?></a></li>
+            			<li><a href="dich-vu/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>"><?= $item['ten'] ?></a></li>
             		<?php endforeach ?>
             	</ul>
             </li>
             <li><a class="<?php if($_REQUEST['com'] == 'thiet-ke') echo 'active'; ?>" href="thiet-ke.html"><?=_thietke?></a>
 				<ul>
             		<?php foreach ($menu_thietke as $item): ?>
-            			<li><a href=""><?= $item['ten'] ?></a></li>
+            			<li><a href="thiet-ke/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>"><?= $item['ten'] ?></a></li>
             		<?php endforeach ?>
             	</ul>
             </li>
             <li><a class="<?php if($_REQUEST['com'] == 'tu-van') echo 'active'; ?>" href="tu-van.html"><?=_tuvan?></a>
 				<ul>
             		<?php foreach ($menu_tuvan as $item): ?>
-            			<li><a href=""><?= $item['ten'] ?></a></li>
+            			<li><a href="tu-van/<?= $item['tenkhongdau'] ?>-<?= $item['id'] ?>"><?= $item['ten'] ?></a></li>
             		<?php endforeach ?>
             	</ul>
             </li>

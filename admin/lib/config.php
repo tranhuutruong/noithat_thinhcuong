@@ -5,7 +5,7 @@
 	
 	$config['database']['servername'] = 'localhost';
 	$config['database']['username'] = 'root';
-	$config['database']['password'] = '';
+	$config['database']['password'] = 'root123456';
 	$config['database']['database'] = 'noithat_thinhcuong';
 	$config['database']['refix'] = 'table_';
 	
