@@ -98,11 +98,13 @@
     <thead>
       <tr>
         <td></td>
-        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>     
-        <td class="tb_data_small"><?=get_main_item()?></td>
+        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>
+        <?php if($_REQUEST['type']=='dichvu' || $_REQUEST['type']=='tuvan'){ ?>
+        	<td class="tb_data_small"><?=get_main_item()?></td>
+        <?php } ?>
         <td class="sortCol"><div>Tên bài viết<span></span></div></td>
+        <td class="tb_data-small">Hình ảnh</td>
          <td class="tb_data_small">Nổi bật</td>
-         
         <td class="tb_data_small">Ẩn/Hiện</td>
         <td width="200">Thao tác</td>
       </tr>
@@ -120,19 +122,24 @@
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>" name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
 
         </td> 
-         <td align="center">
-          <?php
-				$sql = "select ten from table_news_item where id='".$items[$i]['id_item']."'";
-				$result = mysql_query($sql);
-				$danhmuc = mysql_fetch_array($result);
-				echo @$danhmuc['ten']
-          ?>  
-         </td>
-
+        <?php if($_REQUEST['type']=='dichvu' || $_REQUEST['type']=='tuvan'){ ?>
+	         <td align="center">
+	          <?php
+					$sql = "select ten from table_news_item where id='".$items[$i]['id_item']."'";
+					$result = mysql_query($sql);
+					$danhmuc = mysql_fetch_array($result);
+					echo @$danhmuc['ten']
+	          ?>  
+	         </td>
+        <?php } ?>
 
 
         <td class="title_name_data">
             <a href="index.php?com=news&act=edit&id=<?=$items[$i]['id']?>&type=<?=$_REQUEST['type']?><?php if($items[$i]['id_item']!='') echo'&id_item='.$items[$i]['id_item'];?>&hienthi=<?=$items[$i]['hienthi']?><?php if($_REQUEST['p']!='') echo'&p='.$_REQUEST['p'];?>" class="tipS SC_bold"><?=$items[$i]['ten']?></a>
+        </td>
+
+        <td align="center">
+        	<img src="<?php echo _upload_tintuc.$items[$i]['thumb'] ?>" style="height:40px; width:40px;">	
         </td>
 
         <td align="center">

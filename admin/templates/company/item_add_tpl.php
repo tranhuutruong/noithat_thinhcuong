@@ -34,13 +34,28 @@
 			<div class="clear"></div>
 		</div>
 
-         <div class="formRow">
-			<label>Địa chỉ</label>
+        <div class="formRow">
+			<label>Địa chỉ miền Bắc</label>
 			<div class="formRight">
 				<input type="text" value="<?=@$item['diachi'.$key]?>" name="diachi<?=$key?>" title="Nhập địa chỉ công ty" class="tipS" onblur="showAddress(this.value);" />
 			</div>
 			<div class="clear"></div>
 		</div>
+
+        <div class="formRow">
+            <label>Địa chỉ miền Nam</label>
+            <div class="formRight">
+                <input type="text" value="<?=@$item['diachi_2'.$key]?>" name="diachi_2<?=$key?>" title="Nhập địa chỉ công ty" class="tipS" onblur="showAddress(this.value);" />
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow">
+            <label>Tọa độ miền Nam</label>
+            <div class="formRight">
+                <input type="text" value="<?=@$item['toado_2']?>" name="toado_2" title="Nhập tọa độ công ty" class="tipS" onblur="showAddress(this.value);" />
+            </div>
+            <div class="clear"></div>
+        </div>
 		</div>
        <?php } ?>
        		
@@ -82,7 +97,7 @@
 			<div class="clear"></div>
 	</div>  
     <div class="formRow">
-			<label>Tọa độ hiện tại</label>
+			<label>Tọa độ miền bắc</label>
 			<div class="formRight">
             <input type="text" name="toado" value="<?=$item['toado']?>" class="tipS" />
 			</div>
@@ -186,11 +201,31 @@
 			</div>
 			<div class="clear"></div>
 		</div>	
-        
+        <div class="formRow">
+            <label>Google Analytic</label>
+            <div class="formRight">
+                <textarea rows="8" cols="" class="tipS description_input" name="analytic" original-title="Nhập thêm các code muốn thêm vào website">
+                <?= $item['analytic'] ?>
+                </textarea>
+            </div>
+            <div class="clear"></div>
+        </div> 
+        <div class="formRow">
+            <label>Vchat</label>
+            <div class="formRight">
+                <textarea rows="8" cols="" class="tipS description_input" name="vchat" original-title="Nhập thêm các code muốn thêm vào website">
+                     <?= $item['vchat'] ?>
+                </textarea>
+            </div>
+            <div class="clear"></div>
+        </div>  
+
         <div class="formRow">
 			<label>Code thêm</label>
 			<div class="formRight">
-				<textarea rows="8" cols="" class="tipS description_input" name="codethem" original-title="Nhập thêm các code muốn thêm vào website"></textarea>
+				<textarea rows="8" cols="" class="tipS description_input" name="codethem" original-title="Nhập thêm các code muốn thêm vào website">
+                    <?= $item['codethem'] ?>            
+                </textarea>
 			</div>
 			<div class="clear"></div>
 		</div>	

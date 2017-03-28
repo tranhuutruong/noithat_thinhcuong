@@ -58,8 +58,9 @@ function save_gioithieu(){
 	if($sitemap = upload_image("sitemap", "xml|XML","../","sitemap")){
 			$data['sitemap'] = $sitemap;
 	}
-
+	$data['toado_2'] = $_POST['toado_2'];
 	$data['dienthoai'] = $_POST['dienthoai'];
+	$data['diachi_2'] = $_POST['diachi_2'];		
 	$data['email'] = $_POST['email'];
 	$data['website'] = $_POST['website'];
 	$data['fax'] = $_POST['fax'];	
@@ -70,7 +71,9 @@ function save_gioithieu(){
 	$data['tiwtter'] = $_POST['tiwtter'];
 	$data['google'] = $_POST['google'];	
 	$data['youtube'] = $_POST['youtube'];
-	$data['codethem'] = $_POST['codethem'];	
+	$data['codethem'] =magic_quote( $_POST['codethem']);	
+	$data['analytic'] =magic_quote( $_POST['analytic']);	
+	$data['vchat'] =magic_quote( $_POST['vchat']);	
 
 	
 	$d->reset();

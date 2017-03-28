@@ -190,76 +190,15 @@ function get_main_item()
 
        <div id="info" class="tab_content">
           <input type="hidden" name="id" id="id_this_post" value="<?=@$item['id']?>" />
-		<div class="formRow">
-			<label>Chọn danh mục 1</label>
-			<div class="formRight">
-			<?=get_main_danhmuc()?>
+        <?php if($_REQUEST['type']=='thietke'){ ?>
+			<div class="formRow">
+				<label>Chọn danh mục</label>
+				<div class="formRight">
+				<?=get_main_danhmuc()?>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="clear"></div>
-		</div>
-        <div class="formRow">
-			<label>Chọn danh mục cấp 2</label>
-			<div class="formRight">
-			<?=get_main_list()?>
-			</div>
-			<div class="clear"></div>
-		</div>
-        <div class="formRow">
-            <label>Mã sản phẩm:</label>
-            <div class="formRight">
-                <input type="text" id="code_pro" name="masp" value="<?=@$item['masp']?>"  title="Nhập mã sản phẩm" class="tipS" />
-            </div>
-            <div class="clear"></div>
-        </div>
-         <div class="formRow">
-            <label>Giá cũ: </label>
-            <div class="formRight">
-                <input type="text" id="price" name="giacu" value="<?=@$item['giacu']?>"  title="Nhập giá khuyến mãi sản phẩm" class="tipS" onkeypress="return OnlyNumber(event)" />
-            </div>
-            <div class="clear"></div>
-        </div>    
-        
-         <div class="formRow">
-            <label>Giá bán: </label>
-            <div class="formRight">
-                <input type="text" id="price" name="gia" value="<?=@$item['gia']?>"  title="Nhập giá sản phẩm" class="tipS" onkeypress="return OnlyNumber(event)" />
-            </div>
-            <div class="clear"></div>
-        </div>
-        
-        <div class="formRow">
-            <label>Size </label>
-            <div class="formRight">
-                <input type="text" id="price" name="size" value="<?=@$item['size']?>"  title="Nhập size sản phẩm,mỗi size cách nhau dấu phẩy" class="tipS" style="float:left;" />
-               
-                <div class="note">Mỗi size cách nhau dấu phẩy</div>
-            </div>
-            <div class="clear"></div>
-        </div> 
-        
-        <div class="formRow">
-            <label>Màu sắc </label>
-            <div class="formRight">
-            	<input type="hidden" name="mausac" value="<?=$item['mausac']?>" class="input mausac" />
-                <span class="add_mau">
-                    	<?php
-							if($item['mausac']!='')
-							{
-								$arr_mau = explode(',',$item['mausac']);
-								foreach($arr_mau as $key=>$value)
-								{
-									echo '<span data-mau="'.$value.'" style="background-color:'.$value.'"><b title="Xóa màu này"></b></span>';
-								}
-							}
-						?>
-                    </span>
-                <input type="text" class="cp3 chonmau" value="Thêm Màu" />
-                <img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Chọn thêm màu xong nhấn OK">
-               
-            </div>
-            <div class="clear"></div>
-        </div> 
-        
+		<?php } ?>
         <div class="formRow">
 			<label>Tải hình ảnh:</label>
 			<div class="formRight">

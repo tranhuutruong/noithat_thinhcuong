@@ -70,7 +70,7 @@ function get_main_danhmuc()
 		$stmt=mysql_query($sql);
 		$str='
 			<select id="id_danhmuc" name="id_danhmuc" onchange="select_onchange()" class="main_select">
-			<option value="">Danh mục cấp 1</option>			
+			<option value="">Danh mục</option>			
 			';
 		while ($row=@mysql_fetch_array($stmt)) 
 		{
@@ -180,8 +180,10 @@ function get_main_category()
       <thead>
       <tr>
         <td></td>
-        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>     
-        <td class="tb_data_small"><?=get_main_danhmuc()?></td>
+        <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>
+        <?php if($_REQUEST['type']=='thietke'){ ?>     
+        	<td class="tb_data_small"><?=get_main_danhmuc()?></td>
+        <?php } ?>
         <td class="sortCol"><div>Tên<span></span></div></td>
         <td class="tb_data_small">Hình ảnh</td>
         <td class="tb_data_small">Nổi bật</td>
@@ -198,16 +200,16 @@ function get_main_category()
          <td align="center">
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" type="text" value="<?=$items[$i]['stt']?>" name="stt<?=$i?>" data-val3="stt" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" onblur="stt(this)" original-title="Nhập số thứ tự sản phẩm" rel="<?=$items[$i]['id']?>" />
         </td> 
-     	
-		<td align="center">
-			<?php
-				$sql = "select ten from table_product_list where id='".$items[$i]['id_list']."'";
-				$result = mysql_query($sql);
-				$item_list = mysql_fetch_array($result);
-				echo @$item_list['ten']
-			?>      
-        </td>
-              
+     	<?php if($_REQUEST['type']=='thietke'){ ?>
+			<td align="center">
+				<?php
+					$sql = "select ten from table_product_danhmuc where id='".$items[$i]['id_danhmuc']."'";
+					$result = mysql_query($sql);
+					$item_list = mysql_fetch_array($result);
+					echo @$item_list['ten']
+				?>      
+	        </td>
+         <?php } ?>
         <td class="title_name_data">
             <a href="index.php?com=product&act=edit&id_danhmuc=<?=$items[$i]['id_danhmuc']?>&id_list=<?=$items[$i]['id_list']?>&id_cat=<?=$items[$i]['id_cat']?>&id_item=<?=$items[$i]['id_item']?>&type=<?=$_REQUEST['type']?>&p=<?=$_REQUEST['p']?>&id=<?=$items[$i]['id']?>" class="tipS SC_bold"><?=$items[$i]['ten']?></a>
         </td>

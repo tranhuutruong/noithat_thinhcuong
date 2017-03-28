@@ -52,19 +52,19 @@
                <a href="#content_lang_<?=$key?>"><?=$value?></a>
            </li>
            <?php } ?>
-
-
        </ul>
 
        <div id="info" class="tab_content">
           <input type="hidden" name="id" id="id_this_post" value="<?=@$item['id']?>" />
-		<div class="formRow">
-			<label>Chọn danh mục 1</label>
-			<div class="formRight">
-			<?=get_main_item()?>
-			</div>
-			<div class="clear"></div>
-		</div>
+    <?php if($_REQUEST['type']=='dichvu' || $_REQUEST['type']=='tuvan'){ ?>
+  		<div class="formRow">
+  			<label>Chọn danh mục</label>
+  			<div class="formRight">
+  			<?=get_main_item()?>
+  			</div>
+  			<div class="clear"></div>
+  		</div>
+    <?php } ?>
          
         <div class="formRow">
 			<label>Tải hình ảnh:</label>
