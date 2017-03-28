@@ -7,7 +7,7 @@
 						<h3>Giới thiệu</h3>
 					</div>
 					<div class="content">
-						<a href="/gioi-thieu.html"><img src="<?= _upload_hinhanh_l.$gioithieu['photo'] ?>"></a>
+						<a href="/gioi-thieu.html"><img src="resize/366x246/2/<?= _upload_hinhanh_l.$gioithieu['photo'] ?>"></a>
 						<p><?= catchuoi($gioithieu['mota'],1500) ?></p>
 						<p><a href="/gioi-thieu"><span class="glyphicon glyphicon-triangle-right"></span> Xem thêm</a></p>
 					</div>
@@ -27,7 +27,7 @@
 								</div>
 								<div class="thumb">
 									<a href="">
-										<img src="<?=_upload_tintuc_l.$item['thumb']?>">
+										<img src="resize/135x103/2/<?=_upload_tintuc_l.$item['thumb']?>">
 									</a>
 								</div>
 								<div class="description">
@@ -51,7 +51,7 @@
 		<?php foreach ($congtrinh as $item): ?>
 			<div class="col-md-3 no-padding">
 				<div class="works_item">
-					<img src="<?= _upload_sanpham_l.$item['thumb'] ?>">
+					<img src="resize/339x277/2/<?= _upload_sanpham_l.$item['thumb'] ?>">
 					<div class="hover">
 						<div class="description">
 							<h3><?= $item['ten'] ?></h3>
@@ -75,7 +75,7 @@
 				<?php foreach ($dichvu as $item): ?>
 					<div class="service_item">
 						<div class="thumb">
-							<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
+							<img src="resize/350x267/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
 							<a href="">Chi tiết</a>
 						</div>
 						<div class="description">
@@ -99,7 +99,7 @@
 				<?php foreach ($tuvan as $item): ?>
 					<div class="advisory_item">
 						<div class="thumb">
-							<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
+							<img src="resize/233x178/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
 							<a href="">Chi tiết</a>
 						</div>
 						<div class="description">
@@ -126,7 +126,7 @@
 						<?php if($k%2==0){ ?>
 							<div class="new_item">
 								<div class="thumb">
-									<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
+									<img src="resize/300x300/2/<?= _upload_tintuc_l.$item['thumb'] ?>">
 									<a href="">Chi tiết</a>
 								</div>
 								<div class="description">

@@ -13,7 +13,7 @@
 				<?php for($i=0,$count_doitac=count($doitac);$i<$count_doitac;$i++){ ?>
 					<div class="col-md-3 no-padding">
 				    	<div class="partner_item">
-				    		<img src="<?=_upload_hinhanh_l.$doitac[$i]['photo']?>" alt="<?php if($doitac[$i]['ten']!='') echo $doitac[$i]['ten'];else echo $company['ten']?>" />
+				    		<img src="resize/188x86/2/<?=_upload_hinhanh_l.$doitac[$i]['photo']?>" alt="<?php if($doitac[$i]['ten']!='') echo $doitac[$i]['ten'];else echo $company['ten']?>" />
 				    		<a href="<?=$doitac[$i]['link']?>" title="<?=$doitac[$i]['link']?>" target="_blank">Xem</a>
 				    	</div>
 			    	</div>
@@ -32,7 +32,7 @@
 								<?= catchuoi($d_item['mota'],380) ?>
 							</div>
 							<div class="thumb">
-								<img src="<?= _upload_tintuc_l.$d_item['thumb'] ?>">
+								<img src="resize/70x70/1/<?= _upload_tintuc_l.$d_item['thumb'] ?>">
 								<p><?= $d_item['ten'] ?></p>
 							</div>
 						</div>

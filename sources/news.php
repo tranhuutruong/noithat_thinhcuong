@@ -55,7 +55,7 @@
 	
 	$totalRows = $dem['numrows'];
 	$page = $_GET['p'];
-	$pageSize = 7;//Số item cho 1 trang
+	$pageSize = 12;//Số item cho 1 trang
 	$offset = 5;//Số trang hiển thị				
 	if ($page == "")$page = 1;
 	else $page = $_GET['p'];
@@ -63,7 +63,7 @@
 	$bg = $pageSize*$page;		
 	
 	$d->reset();
-	$sql = "select id,ten$lang as ten,tenkhongdau,mota$lang as mota,thumb,ngaytao from #_news where $where limit $bg,$pageSize";		
+	$sql = "select id,ten$lang as ten,tenkhongdau,mota$lang as mota,thumb,photo,ngaytao from #_news where $where limit $bg,$pageSize";		
 	$d->query($sql);
 	$tintuc = $d->result_array();	
 	$url_link = getCurrentPageURL();

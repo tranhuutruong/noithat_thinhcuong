@@ -12,7 +12,7 @@
 		<div id="hotline">
 			<p><?= $company['dienthoai'] ?></p>
 		</div>
-		<img src="<?=_upload_hinhanh_l.$banner['photo']?>" class="banner" />
+		<img src="resize/1200x185/2/<?=_upload_hinhanh_l.$banner['photo']?>" class="banner" />
 		</ul>
 	</div>
 </div>

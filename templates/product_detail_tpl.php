@@ -1,6 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9 no-padding">
+
+            <?php if($_REQUEST['com']!='cong-trinh'){ ?>
               <div class="box_container">
                 <div class="wap_pro">
                     <div class="zoom_slick">    
@@ -31,10 +33,25 @@
                     </ul>
                     <div class="clear"></div>  
               </div><!--.wap_pro-->
-                    
+            <?php }else{ ?>
+                    <div>  
+                <link rel="stylesheet" type="text/css" href="engine3/style.css" />
+                      <div id="wowslider-container3">
+                  <div class="ws_images"><ul>
+                              <li><img src="<?=_upload_sanpham_l.$row_detail['photo'] ?>" title="<?= $row_detail['ten'] ?>" id="wows3_0"></li>
+                          <?php foreach ($hinhthem as $k=> $item): ?>
+                              <li><img src="<?= _upload_hinhthem_l.$item['photo'] ?>" title="<?= $row_detail['ten'] ?>" id="wows3_<?= $k ?>"/></li>
+                          <?php endforeach ?>
+                      </ul></div>
+                  <div class="ws_shadow"></div>
+
+                  </div>  
+                <script type="text/javascript" src="engine3/wowslider.js"></script>
+                <script type="text/javascript" src="engine3/script.js"></script>
+            <?php } ?>
                     <div id="tabs">   
                         <ul id="ultabs">                 
-                            <li data-vitri="0">Chi tiết sản phẩm</li>
+                            <li data-vitri="0">Chi tiết</li>
                             <li data-vitri="1">Bình luận</li>      
                         </ul>
                         <div style="clear:both"></div>
@@ -54,7 +71,7 @@
 
 
             <div class="title-intro">
-                <h3>Sản phẩm cùng loại</h3>
+                <h3>Bài viết cùng loại</h3>
             </div>
             <div class="wap_item">
             <?php for($i=0,$count_product=count($product);$i<$count_product;$i++){  ?>

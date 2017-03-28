@@ -34,7 +34,7 @@ if ($to > $totalPages) { $to = $totalPages; }
 		$links= $links . "<li><a href = '{$qt}'>{$j}</a></li>";
 	   } 	   
 	} //for
-	return '<ul class="pages">'.$firstLink.$links.$lastLink.'</ul>';
+	return '<nav aria-label="Page navigation"><ul class="pagination">'.$firstLink.$links.$lastLink.'</ul></nav>';
 }
 
 function magic_quote($str, $id_connect=false)	
@@ -268,7 +268,6 @@ function delete_file($file){
 //Upload file
 function upload_image($file, $extension, $folder, $newname=''){
 	if(isset($_FILES[$file]) && !$_FILES[$file]['error']){
-		
 		$ext = end(explode('.',$_FILES[$file]['name']));
 		$name = basename($_FILES[$file]['name'], '.'.$ext);
 		

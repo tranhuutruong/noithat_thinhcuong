@@ -183,7 +183,8 @@ function get_main_category()
         <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;">Thứ tự</a></td>     
         <td class="tb_data_small"><?=get_main_danhmuc()?></td>
         <td class="sortCol"><div>Tên<span></span></div></td>
-         <td class="tb_data_small">Nổi bật</td>
+        <td class="tb_data_small">Hình ảnh</td>
+        <td class="tb_data_small">Nổi bật</td>
         <td class="tb_data_small">Ẩn/Hiện</td>
         <td width="200">Thao tác</td>
       </tr>
@@ -197,14 +198,7 @@ function get_main_category()
          <td align="center">
             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" type="text" value="<?=$items[$i]['stt']?>" name="stt<?=$i?>" data-val3="stt" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" onblur="stt(this)" original-title="Nhập số thứ tự sản phẩm" rel="<?=$items[$i]['id']?>" />
         </td> 
-        <td align="center">
-			<?php
-				$sql_danhmuc="select ten from table_product_danhmuc where id='".$items[$i]['id_danhmuc']."'";
-				$result=mysql_query($sql_danhmuc);
-				$item_danhmuc =mysql_fetch_array($result);
-				echo @$item_danhmuc['ten']
-			?>      
-        </td>
+     	
 		<td align="center">
 			<?php
 				$sql = "select ten from table_product_list where id='".$items[$i]['id_list']."'";
@@ -213,32 +207,17 @@ function get_main_category()
 				echo @$item_list['ten']
 			?>      
         </td>
-                <td align="center" class="none">
-			<?php
-				$sql_cat="select ten from table_product_cat where id='".$items[$i]['id_cat']."'";
-				$result=mysql_query($sql_cat);
-				$item_cat =mysql_fetch_array($result);
-				echo @$item_cat['ten']
-			?>      
-        </td>
-		<td align="center" class="none">
-			<?php
-				$sql = "select ten from table_product_item where id='".$items[$i]['id_item']."'";
-				$result = mysql_query($sql);
-				$item_item = mysql_fetch_array($result);
-				echo @$item_item['ten']
-			?>      
-        </td>
+              
         <td class="title_name_data">
             <a href="index.php?com=product&act=edit&id_danhmuc=<?=$items[$i]['id_danhmuc']?>&id_list=<?=$items[$i]['id_list']?>&id_cat=<?=$items[$i]['id_cat']?>&id_item=<?=$items[$i]['id_item']?>&type=<?=$_REQUEST['type']?>&p=<?=$_REQUEST['p']?>&id=<?=$items[$i]['id']?>" class="tipS SC_bold"><?=$items[$i]['ten']?></a>
+        </td>
+        <td align="center">
+        	<img src="<?= _upload_sanpham.$items[$i]['thumb'] ?>" style="height: 40px; width:40px;">
         </td>
         <td align="center">
         <a data-val2="table_<?=$_GET['com']?>" rel="<?=$items[$i]['noibat']?>" data-val3="noibat" class="diamondToggle <?=($items[$i]['noibat']==1)?"diamondToggleOff":""?>" data-val0="<?=$items[$i]['id']?>" ></a> 
         </td>
 
-         <td align="center">
-        <a data-val2="table_<?=$_GET['com']?>" rel="<?=$items[$i]['spbanchay']?>" data-val3="spbanchay" class="diamondToggle <?=($items[$i]['spbanchay']==1)?"diamondToggleOff":""?>" data-val0="<?=$items[$i]['id']?>" ></a> 
-        </td>
        
         <td align="center">
           <a data-val2="table_<?=$_GET['com']?>" rel="<?=$items[$i]['hienthi']?>" data-val3="hienthi" class="diamondToggle <?=($items[$i]['hienthi']==1)?"diamondToggleOff":""?>" data-val0="<?=$items[$i]['id']?>" ></a>   

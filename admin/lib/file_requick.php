@@ -38,24 +38,32 @@
 			$source = "product";
 			$template = isset($_GET['id']) ? "product_detail" : "product";
 			break;
+
+		case 'tu-van':
+			$type = "tuvan";
+			$title = _tuvan;
+			$title_cat = _tuvan;
+			$source = "news";
+			$template = isset($_GET['id']) ? "news_detail" : "news";
+			break;
 			
 		case 'tin-tuc':
 			$type = "tintuc";
-			$title = _tintuc;
-			$title_cat = _tintuc;
+			$title = _tintucsukien;
+			$title_cat = _tintucsukien;
 			$source = "news";
 			$template = isset($_GET['id']) ? "news_detail" : "news";
+			break;
+			
+		case 'cong-trinh':
+			$type = "congtrinh";
+			$title = _congtrinh;
+			$title_cat = _congtrinh;
+			$source = "product";
+			$template = isset($_GET['id']) ? "product_detail" : "product";
 			break;
 			
 		
-			
-		case 'tuyen-dung':
-			$type = "tuyendung";
-			$title = _tuyendung;
-			$title_cat = _tuyendung;
-			$source = "news";
-			$template = isset($_GET['id']) ? "news_detail" : "news";
-			break;
 			
 		case 'lien-he':
 			$type = "lienhe";

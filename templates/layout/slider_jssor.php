@@ -12,7 +12,7 @@
                 <div u="slides" style="cursor: move;width: 780px; height: 360px;overflow: hidden;">
                     <?php for($i=0,$count_slider=count($slider);$i<$count_slider;$i++){ ?>
                     <div>
-                        <img u="image" src="<?php if($slider[$i]['photo']!='')echo _upload_hinhanh_l.$slider[$i]['photo'];else echo 'images/noimage.png' ?>" alt="<?=$$slider[$i]['ten']?>" />
+                        <img u="image" src="resize/780x360/2/<?php if($slider[$i]['photo']!='')echo _upload_hinhanh_l.$slider[$i]['photo'];else echo 'images/noimage.png' ?>" alt="<?=$$slider[$i]['ten']?>" />
                     </div>
                     <?php } ?>                
                 </div>

@@ -11,7 +11,7 @@
 	 		<div class="col-md-4">
 		        <div class="service_item">
 					<div class="thumb">
-						<img src="<?= _upload_tintuc_l.$item['thumb'] ?>">
+						<img src="resize/310x192/2/<?= _upload_tintuc_l.$item['photo'] ?>">
 						<a href="<?=$com?>/<?=$item['tenkhongdau']?>-<?=$item['id']?>.html" title="<?=$item['ten']?>">Chi tiết</a>
 					</div>
 					<div class="description">

@@ -1,6 +1,7 @@
 <!-- my-css -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link href="css/animate.css" type="text/css" rel="stylesheet" />
+<link href="css/animation.css" type="text/css" rel="stylesheet" />
 <link href="css/popup.css" type="text/css" rel="stylesheet" />
 <link href="css/default.css" type="text/css" rel="stylesheet" />
 <link href="style.css" type="text/css" rel="stylesheet" />
@@ -29,5 +30,6 @@
 	<!-- Tab -->
 	<link href="css/tab.css" type="text/css" rel="stylesheet" />
 <?php } ?>
+
 
 
